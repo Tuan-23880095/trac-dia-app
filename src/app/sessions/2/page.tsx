@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Formula from "@/components/Formula";
 import PDFDocument from "@/components/PDFDocument";
-import html2pdf from "html2pdf.js";
+
 import { fetchGAS } from "@/lib/api";
 
 export default function Session2Page() {
@@ -40,7 +40,8 @@ export default function Session2Page() {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  const exportPDF = () => {
+  const exportPDF = async () => {     // Tải thư viện động chỉ khi người dùng bấm nút     
+    const html2pdf = (await import("html2pdf.js")).default;
     const opt = { margin: 10, filename: `Buoi2_${user?.mssv}.pdf`, html2canvas: { scale: 2 }, jsPDF: { unit: 'mm', format: 'a4' } };
     html2pdf().set(opt).from(pdfRef.current).save();
   };
