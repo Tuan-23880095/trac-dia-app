@@ -3,27 +3,41 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Tone nền và chữ mặc định toàn hệ thống */
+  --background: #f8fafc; /* Gần giống bg-slate-50 */
+  --foreground: #0f172a; /* Gần giống text-slate-900 */
+  
+  /* Các biến màu bắt buộc phải có để code JS cũ hiển thị đúng màu */
+  --blue: #2563eb; 
+  --red: #dc2626; 
+  --green: #16a34a;
 }
 
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+/* Ẩn mũi tên tăng/giảm của thẻ input nhập số (UI sạch hơn) */
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 input[type='number'] {
   -moz-appearance: textfield;
 }
 
+/* =========================================
+   TÙY CHỈNH THANH CUỘN (SCROLLBAR) HIỆN ĐẠI
+========================================= */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: #f1f5f9;
   border-radius: 8px;
 }
 
@@ -36,6 +50,9 @@ input[type='number'] {
   background: #94a3b8;
 }
 
+/* =========================================
+   CHẾ ĐỘ IN ẤN (CHO TÍNH NĂNG XUẤT PDF)
+========================================= */
 @media print {
   body {
     background-color: white !important;
