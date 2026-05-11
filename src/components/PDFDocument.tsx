@@ -18,6 +18,9 @@ interface PDFDocumentProps {
 // Sử dụng forwardRef để component cha có thể "chụp" phần tử này xuất ra PDF
 const PDFDocument = forwardRef<HTMLDivElement, PDFDocumentProps>(
   ({ user, session, data, submitTime }, ref) => {
+    // THÊM DÒNG NÀY ĐỂ SỬA LỖI VERCEL BUILD:
+    // Nếu chưa có thông tin user (đang chạy trên server), sẽ không render PDF
+    if (!user) return null;
     return (
       // Khung giấy A4 chuẩn: rộng 210mm, nền trắng, chữ đen, font Serif học thuật
       <div
