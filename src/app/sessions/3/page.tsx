@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Formula from "@/components/Formula";
 import PDFDocument from "@/components/PDFDocument";
-import html2pdf from "html2pdf.js";
+
 import { fetchGAS } from "@/lib/api";
 
 export default function Session3Page() {
@@ -57,7 +57,8 @@ export default function Session3Page() {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  const exportPDF = () => {
+const exportPDF = async () => {     // Tải thư viện động chỉ khi người dùng bấm nút     
+    const html2pdf = (await import("html2pdf.js")).default;
     const opt = {
       margin: 10,
       filename: `Buoi3_GocBang_${user?.mssv}.pdf`,
