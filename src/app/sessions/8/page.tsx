@@ -143,7 +143,7 @@ export default function Session8Page() {
           <div className="p-4 bg-gray-900 text-white flex justify-between items-center">
             <span className="font-bold tracking-widest uppercase text-sm">Bảng tính Bình sai Tuyến kín</span>
             <div className="flex items-center gap-2 text-sm bg-gray-800 px-3 py-1 rounded-lg">
-              <span>Cao độ gốc $H_A$:</span>
+              <span>Cao độ gốc {"$H_A$"}:</span>
               <input name="base_elevation" value={data.base_elevation} onChange={handleInputChange} className="w-20 bg-transparent text-yellow-400 font-bold outline-none text-right border-b border-gray-600" />
               <span>m</span>
             </div>
@@ -156,7 +156,7 @@ export default function Session8Page() {
                   <th className="p-4 w-1/6">Trạm đo</th>
                   <th className="p-4 w-1/6 border-l">Chênh cao đo $h$ (mm)</th>
                   <th className="p-4 w-1/6 border-l bg-indigo-50 text-indigo-700">Hiệu chỉnh $v$ (mm)</th>
-                  <th className="p-4 w-1/6 border-l">Chênh cao BS $h_{hc}$ (mm)</th>
+                  <th className="p-4 w-1/6 border-l">Chênh cao BS {"$h_{hc}$"} (mm)</th>
                   <th className="p-4 w-1/6 border-l">Tên mốc</th>
                   <th className="p-4 w-1/6 border-l bg-green-50 text-green-700">Cao độ $H$ (m)</th>
                 </tr>
@@ -201,7 +201,7 @@ export default function Session8Page() {
 
                 {/* Dòng Tổng cộng */}
                 <tr className="bg-gray-100 font-bold">
-                  <td className="p-4 text-gray-700 uppercase text-xs">Tổng cộng $\sum$</td>
+                  <td className="p-4 text-gray-700 uppercase text-xs">Tổng cộng {"$\sum$"}</td>
                   <td className={`p-4 border-l font-mono ${data.fh_total !== 0 ? 'text-gray-900' : 'text-gray-400'}`}>$f_h$ = {data.fh_total}</td>
                   <td className={`p-4 border-l font-mono ${data.is_v_valid ? 'text-indigo-600' : 'text-red-500'}`}>$\sum V$ = {data.v_total}</td>
                   <td className="p-4 border-l font-mono">0</td>
