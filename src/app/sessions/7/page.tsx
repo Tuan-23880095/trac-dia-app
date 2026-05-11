@@ -184,7 +184,7 @@ export default function Session7Page() {
               </p>
             </div>
             <div className={`p-6 rounded-2xl ${data.is_passed ? 'bg-gray-800' : 'bg-white shadow-inner'}`}>
-              <p className={`text-[10px] uppercase font-bold mb-2 ${data.is_passed ? 'text-gray-400' : 'text-gray-500'}`}>Giới hạn cho phép ($f_{cp}$)</p>
+              <p className={`text-[10px] uppercase font-bold mb-2 ${data.is_passed ? 'text-gray-400' : 'text-gray-500'}`}>Giới hạn cho phép ({"$f_{cp}$"})</p>
               <p className={`text-4xl font-mono font-black ${data.is_passed ? 'text-green-400' : 'text-gray-900'}`}>
                 ±{data.f_h_allow} <span className="text-xl font-sans font-normal">mm</span>
               </p>
