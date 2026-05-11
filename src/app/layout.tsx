@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 // Lưu ý: Đảm bảo bạn đã có file globals.css trong cùng thư mục app hoặc src
 // File này chứa các chỉ thị của Tailwind (@tailwind base; @tailwind components; @tailwind utilities;)
 import "../styles/globals.css"; // Tùy vào cấu trúc thư mục, có thể đổi thành "./globals.css"
+import TopNav from "@/components/TopNav"; // <-- THÊM DÒNG NÀY
 
 // Sử dụng font Inter hiện đại, hỗ trợ tốt tiếng Việt
 const inter = Inter({ subsets: ["latin", "vietnamese"] });
