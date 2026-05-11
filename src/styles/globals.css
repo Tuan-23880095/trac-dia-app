@@ -1,0 +1,53 @@
+/* 1. Nạp 3 lõi cơ bản của Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Định nghĩa biến màu sắc mặc định (Khớp với file tailwind.config.js) */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* 3. TÙY CHỈNH DÀNH RIÊNG CHO WEB TRẮC ĐỊA */
+
+/* Ẩn mũi tên tăng/giảm (spinners) của ô nhập số */
+/* Giúp các ô nhập độ, phút, giây, chênh cao (mm) trông sạch sẽ và học thuật hơn */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* Tùy chỉnh thanh cuộn (Scrollbar) cho các bảng số liệu lớn */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc; /* Màu xám nhạt */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; /* Màu xám vừa */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; /* Đậm hơn khi hover */
+}
+
+/* Lớp CSS tiện ích in ấn (Chỉ áp dụng khi xuất PDF) */
+@media print {
+  body {
+    background-color: white !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
