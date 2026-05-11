@@ -1,3 +1,4 @@
+import 'katex/dist/katex.min.css'; // Thêm dòng này để nạp CSS toán học
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 // Lưu ý: Đảm bảo bạn đã có file globals.css trong cùng thư mục app hoặc src
