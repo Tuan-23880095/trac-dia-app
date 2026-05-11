@@ -182,7 +182,7 @@ export default function Session6Page() {
                 </p>
               </div>
               <div className="pt-4 border-t border-gray-700">
-                <p className="text-gray-400 text-[10px] uppercase font-bold">Chênh cao trung bình ($h_{tb}$)</p>
+                <p className="text-gray-400 text-[10px] uppercase font-bold">Chênh cao trung bình ({"$h_{tb}$"})</p>
                 <p className="text-4xl font-mono font-black text-cyan-400 mt-2">{data.h_avg} <span className="text-lg">mm</span></p>
               </div>
             </div>
