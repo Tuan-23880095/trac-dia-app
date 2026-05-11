@@ -238,8 +238,8 @@ export default function Session8Page() {
                 {data.has_input && (data.is_h_valid ? <span className="text-green-400">ĐẠT</span> : <span className="text-red-400 animate-pulse">LỖI</span>)}
               </p>
               <div className="font-mono text-sm">
-                <p>$H_{gốc}$ = {Number(data.base_elevation).toFixed(3)}</p>
-                <p>$H_{cuối}$ = {data.H_final.toFixed(3)}</p>
+                <p>{"$H_{gốc}$"} = {Number(data.base_elevation).toFixed(3)}</p>
+                <p>{"$H_{cuối}$"} = {data.H_final.toFixed(3)}</p>
               </div>
             </div>
           </div>
